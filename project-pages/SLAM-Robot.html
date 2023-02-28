@@ -60,9 +60,10 @@
             - Change the 'body-text' text to a short and sweet description of your project (maybe the same as the one on the project card)
             - Change "desktop.jpeg" to the image filename you uploaded in the assets/images folder.
           -->
-        <div class="main-title">Autonomous Security Robot System</div>
-        <div class="body-text">A small description about the project goes here, get the reader hooked on the project and tell them why they should continue to read this page. Give it a sweet tagline.</div>
-        <image class="project-header-image" src="../assets/images/desktop.jpeg">
+        <div class="main-title">Autonomous Navigation Robot</div>
+<!--         <div class="body-text">A small description about the project goes here, get the reader hooked on the project and tell them why they should continue to read this page. Give it a sweet tagline.</div> -->
+        <div class="body-text">The objective of this project was to develop and implement a robot that is able to map out its environment, while maintaining its own position therein. The robot will be able to follow waypoints and can move in any direction.</div>
+	<image class="project-header-image" src="../assets/images/desktop.jpeg">
       </div>
 
       <!-- PROJECT DETAILS -->
@@ -74,9 +75,12 @@
       <div id="project-details">
         <div class="subheader-text">Project Details / Background</div>
         <div class="project-details-content">
-          <div class="body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique risus nec feugiat in fermentum. Sed id semper risus in hendrerit gravida. Placerat duis ultricies lacus sed. Id neque aliquam vestibulum morbi blandit cursus risus. Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium lectus quam id leo. Vitae congue mauris rhoncus aenean vel elit.</div>
-          <div class="body-text">Vitae justo eget magna fermentum. Imperdiet nulla malesuada pellentesque elit eget gravida. Aliquet nec ullamcorper sit amet. Aliquet sagittis id consectetur purus. Ac tortor dignissim convallis aenean. Enim neque volutpat ac tincidunt vitae. Lobortis feugiat vivamus at augue. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Viverra orci sagittis eu volutpat. Massa tincidunt nunc pulvinar sapien et ligula. Donec enim diam vulputate ut.</div>
-        </div>
+          <div class="body-text">The system uses a 360° spinning LiDAR as its main sensor to obtain environment data. The RPLidar A1 is a low cost LiDAR that can be mounted to flat surfaces. The device dh</div>
+          <div class="body-text">The holonomic movement of the device requires a choice between differential drive and omnidirectional wheels. For true holonomic movement omnidirectional wheels are used as they allow the device to sideways like a crab. These wheels have some drawback. A much increased amount of wheel slip is experienced on especially hard floors, this makes the use of encoders for the motors of little purpose.</div>
+	  <div>To interface the LiDAR and motors to a set of algorithms that can: extract data, perform calculations and perform actions, Robotic Operating System (ROS) is used as middleware. ROS has a immense amount of resources available in the form of packages that can be installed via package manager or from source. The benefit of installing from source is being able edit code that could fit your needs better.</div>
+	  <div>The specific packages used and modified are: Hector SLAM and Navigation Stack. Hector is a PhD project completed in 2013 at the University of Darmstadt. Simultaneous localisation and mapping (SLAM) is a quite new topic with limited research. This implimentation of SLAM is able to accurately build a map with limited error (measured 4 cm on a distance of 4 m) while kepping track the position of the device without any encoder or odometry data. </div>
+	  <div>The navigation stack, as the name implies is used to navigate through the map set up by the SLAM algorithm. Navigation is primarily used in this project to receive waypoints from users and set up a path to reach that specific coordinate. Various shortest path algorithms are available for use, including A* and Dijkstra. Object avoidance was a struggle to implement and ultimately could not be used with confidence to work every time.</div>
+	</div>
       </div>
 
       <!-- IMAGE GALLERY -->
@@ -102,16 +106,24 @@
                   - IMAGE_CAPTION: to the caption of the image
             -->
             <div class="gallery-image-container half-width">
-              <img src="../assets/images/code.jpeg" class="gallery-image">
-              <span class="image-caption">Give your image a caption. People love context.</span>
+              <img src="../assets/images/SLAMRobotImages/HardwareUserGuide.jpg" class="gallery-image">
+              <span class="image-caption">Hardware used for robotic platform. Designed with mind to replace some parts when needed.</span>
             </div>
             <div class="gallery-image-container half-width">
-              <img src="../assets/images/sketchbook.jpeg" class="gallery-image">
-              <span class="image-caption">Give your image a caption. People love context.</span>
+              <img src="../assets/images/SLAMRObotImages/Nav2Start.png" class="gallery-image">
+              <span class="image-caption">Robot in motion to navigation goal.</span>
             </div>
             <div class="gallery-image-container">
-              <img src="../assets/images/camera.jpeg" class="gallery-image">
-              <span class="image-caption">Give your image a caption. People love context.</span>
+              <img src="../assets/images/SLAMRobotImages/UserInterface.png" class="gallery-image">
+              <span class="image-caption">Arbitrary website for manual control over network.</span>
+            </div>
+	    <div class="gallery-image-container">
+              <img src="../assets/images/SLAMRobotImages/ObjectAvoid1.png" class="gallery-image">
+              <span class="image-caption">Foxglove is used as a program to view maps and publish waypoints for the device.</span>
+            </div>
+	    <div class="gallery-image-container">
+              <img src="../assets/images/SLAMRobotImages/SpeedTestMap.png" class="gallery-image">
+              <span class="image-caption">Example of full scale map including the device path traveled.</span>
             </div>
         </div>
       </div>
