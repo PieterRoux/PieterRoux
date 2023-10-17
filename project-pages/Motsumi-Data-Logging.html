@@ -1,0 +1,145 @@
+<!-- 
+  IMPORTANT! 
+  
+  Keep this file unchanged to use as a template for all future project pages. 
+  For every new project you add to your portfolio, make a copy of this file in the
+  'project-pages' folder with a name related to the project.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    <!-- 
+      TODO
+      Upload your Unemployable (or whatever photo you like) to the assets/images folder
+      and change the name of the image below to match the uploaded one
+      Change the title in the <title> tag to whatever you would like the title of your portfolio to be
+      This should be the same across all pages.
+     -->
+     <link rel="icon" href="../assets/images/1311.png" />
+     <title>Pieter Roux's Portfolio</title>
+    <meta name="description" content="A portfolio template for the Unemployables community.">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+
+		<script defer src="../js/script.js"></script>
+	</head>
+	<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <a class="nav-title-link" href="../index.html">
+        <!-- 
+          TODO - Change the "Portfolio Title" to whatever you want displayed in the top left
+          (this should be the same across all pages)
+         -->
+        <span class="nav-title">Pieter Roux</span>
+        <!-- 
+          TODO - Change the email after 'mailto:' to your email address for contact 
+        
+          (this should be the same across all pages)
+        -->
+        <a class="button" href="mailto:pieterhroux00@gmail.com">
+          <span class="button-text">Contact Me</span>
+        </a>
+      </a>
+    </div>
+
+    <!-- MAIN PAGE CONTENT -->
+    <div id="main-content">
+
+      <!-- PROJECT HEADER -->
+      <div id="project-header">
+          <!-- 
+            TODO
+            - Change the 'main-title' text to the name of your project
+            - Change the 'body-text' text to a short and sweet description of your project (maybe the same as the one on the project card)
+            - Change "desktop.jpeg" to the image filename you uploaded in the assets/images folder.
+          -->
+        <div class="main-title">Autonomous Navigation Robot</div>
+<!--         <div class="body-text">A small description about the project goes here, get the reader hooked on the project and tell them why they should continue to read this page. Give it a sweet tagline.</div> -->
+        <div class="body-text">The objective of this project was to develop and implement a robot that is able to map out its environment, while maintaining its own position therein. The robot will be able to follow waypoints and can move in any direction.</div>
+	<image class="project-header-image" src="../assets/images/SLAMRobotImages/AssemblyPlatform.png">
+      </div>
+
+      <!-- PROJECT DETAILS -->
+      <!-- 
+        TODO
+        - Change the 'subheader-text' to whatever header you want for project details
+        - Add paragraphs using the <div class="body-text"></div> elements in the "project-details-content"
+      -->
+      <div id="project-details">
+        <div class="subheader-text">Project Details / Background</div>
+        <div class="project-details-content">
+          <div class="body-text">The system uses a 360° spinning LiDAR as its main sensor to obtain environment data. The RPLidar A1 is a low cost LiDAR that can be mounted to flat surfaces.</div>
+          <div class="body-text">The holonomic movement of the device requires a choice between differential drive and omnidirectional wheels. For true holonomic movement omnidirectional wheels are used as they allow the device to sideways like a crab. These wheels have some drawback. A much increased amount of wheel slip is experienced on especially hard floors, this makes the use of encoders for the motors of little purpose.</div>
+	  <div>To interface the LiDAR and motors to a set of algorithms that can: extract data, perform calculations and perform actions, Robotic Operating System (ROS) is used as middleware. ROS has a immense amount of resources available in the form of packages that can be installed via package manager or from source. The benefit of installing from source is being able edit code that could fit your needs better.</div>
+	  <div>The specific packages used and modified are: Hector SLAM and Navigation Stack. Hector is a PhD project completed in 2013 at the University of Darmstadt. Simultaneous localisation and mapping (SLAM) is a quite new topic with limited research. This implimentation of SLAM is able to accurately build a map with limited error (measured 4 cm on a distance of 4 m) while kepping track the position of the device without any encoder or odometry data. </div>
+	  <div>The navigation stack, as the name implies is used to navigate through the map set up by the SLAM algorithm. Navigation is primarily used in this project to receive waypoints from users and set up a path to reach that specific coordinate. Various shortest path algorithms are available for use, including A* and Dijkstra. Object avoidance was a struggle to implement and ultimately could not be used with confidence to work every time.</div>
+	</div>
+      </div>
+
+      <!-- IMAGE GALLERY -->
+      <div id="project-gallery">
+        <!-- TODO - Change the 'subheader-text' to whatever you want the Gallery section header to say -->
+        <div class="subheader-text">Image Gallery</div>
+        <div class="project-gallery-content">
+            <!-- 
+              TODO
+              This is where the images in the gallery live. Here's a simple gallery image for you to copy:
+              Full Width Image:
+                <div class="gallery-image-container">
+                  <img src="../assets/images/IMAGE_NAME" class="gallery-image">
+                  <span class="image-caption">IMAGE_CAPTION</span>
+                </div>
+              Half Width Image: 
+                <div class="gallery-image-container half-width">
+                  <img src="../assets/images/IMAGE_NAME" class="gallery-image">
+                  <span class="image-caption">IMAGE_CAPTION</span>
+                </div>
+              - To add an image to the this area, copy one of the above, paste it below this comment, and change the following:
+                  - IMAGE_NAME: the name of the image file in assets/images
+                  - IMAGE_CAPTION: to the caption of the image
+            -->
+            <div class="gallery-image-container half-width">
+              <img src="../assets/images/SLAMRobotImages/HardwareUserGuide.jpg" class="gallery-image">
+              <span class="image-caption">Hardware used for robotic platform. Designed with mind to replace some parts when needed.</span>
+            </div>
+            <div class="gallery-image-container half-width">
+              <img src="../assets/images/SLAMRobotImages/Nav2Start.png" class="gallery-image">
+              <span class="image-caption">Robot in motion to navigation goal.</span>
+            </div>
+            <div class="gallery-image-container half-width">
+              <img src="../assets/images/SLAMRobotImages/UserInterface.png" class="gallery-image">
+              <span class="image-caption">Arbitrary website for manual control over network.</span>
+            </div>
+	    <div class="gallery-image-container half-width">
+              <img src="../assets/images/SLAMRobotImages/ObjectAvoid1.png" class="gallery-image">
+              <span class="image-caption">Foxglove is used as a program to view maps and publish waypoints for the device.</span>
+            </div>
+	    <div class="gallery-image-container">
+              <img src="../assets/images/SLAMRobotImages/SpeedTestMap.jpg" class="gallery-image">
+              <span class="image-caption">Example of full scale map including the device path traveled.</span>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer">
+      <!-- 
+        TODO - Change the email after "mailto" to your contact email 
+      
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" href="mailto:pieterhroux00@gmail.com">
+        <image src="../assets/icons/mail.svg" class="footer-icon"/>
+      </a>
+    </div>
+
+	</body>
+</html>
