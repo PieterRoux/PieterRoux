@@ -1,0 +1,168 @@
+
+
+<!-- 
+  IMPORTANT! 
+  
+  Keep this file unchanged to use as a template for all future project pages. 
+
+  For every new project you add to your portfolio, make a copy of this file in the
+  'project-pages' folder with a name related to the project.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    <!-- 
+      TODO
+
+      Upload your Unemployable (or whatever photo you like) to the assets/images folder
+      and change the name of the image below to match the uploaded one
+
+      Change the title in the <title> tag to whatever you would like the title of your portfolio to be
+
+      This should be the same across all pages.
+     -->
+     <link rel="icon" href="../assets/images/1311.png" />
+     <title>Unemployables Portfolio</title>
+    <meta name="description" content="A portfolio template for the Unemployables community.">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+
+		<script defer src="../js/script.js"></script>
+	</head>
+	<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <a class="nav-title-link" href="../index.html">
+        <!-- 
+          TODO - Change the "Portfolio Title" to whatever you want displayed in the top left
+
+          (this should be the same across all pages)
+         -->
+        <span class="nav-title">Portfolio Title</span>
+        <!-- 
+          TODO - Change the email after 'mailto:' to your email address for contact 
+        
+          (this should be the same across all pages)
+        -->
+        <a class="button" href="mailto:whitevans.eth@gmail.com">
+          <span class="button-text">Contact Me</span>
+        </a>
+      </a>
+    </div>
+
+    <!-- MAIN PAGE CONTENT -->
+    <div id="main-content">
+
+      <!-- PROJECT HEADER -->
+      <div id="project-header">
+          <!-- 
+            TODO
+
+            - Change the 'main-title' text to the name of your project
+            - Change the 'body-text' text to a short and sweet description of your project (maybe the same as the one on the project card)
+            - Change "desktop.jpeg" to the image filename you uploaded in the assets/images folder.
+          -->
+        <div class="main-title">Remote Controlled Stabilising Camera</div>
+        <div class="body-text">The project was to design and implement a platform which could stabilise itself in the pitch and the yaw axes, and allow the user to control the aiming point of the platform. </div>
+        <image class="project-header-image" src="../assets/images/StabilisedSight/PlatfromView1.png">
+      </div>
+
+      <!-- PROJECT DETAILS -->
+      <!-- 
+        TODO
+
+        - Change the 'subheader-text' to whatever header you want for project details
+        - Add paragraphs using the <div class="body-text"></div> elements in the "project-details-content"
+      -->
+      <div id="project-details">
+        <div class="subheader-text">Project Details / Background</div>
+        <div class="project-details-content">
+          <div class="body-text">The system is required to stabilise itself when undergoing any changes in the pitch and the yaw planes. When the user inputs a turning rate for the device, the device must respond within a 100ms and start to move. A joystick is used to povide turning rate commands to the platform. When undergoing movement the device should have full 360° turning capabilities in the yaw axis. Finally thr device should output the video feed from the camera.  </div>
+          <div class="body-text">The system uses a two control systems. A positional PID controller is used for the device to maintain aim when it is in a stabilising state. A speed PID controller is used when the user inputs a desired turning rate for the device to achieve. The platform switches between the two controllers. The stabilising controller is only on when the user provides no input. The platform transfer function was calculated and used to design a PID controller in MATLAB. The originally calculated values were used to further fine tune the response of the controller, compensating for variables that cannot easily be quantified, such as friction. Using the PID gain values from the rate controller as initial values the PID gains for the position controller was then also fine tuned for an suitable response. </div>
+          <div class="body-text">360° of movement was achieved using a slip ring in the base of the platform, and making it the pivoting point of the platform. This resulted in the motor using a gear to rotate the platform around the pivot shaft. Finally due to this slipring implementation digital video could not be used. A block camera with analogue video output was used and the 2 wires for the signal and ground was passed through the slipring.</div>
+        </div>
+      </div>
+
+      <!-- IMAGE GALLERY -->
+      <div id="project-gallery">
+        <!-- TODO - Change the 'subheader-text' to whatever you want the Gallery section header to say -->
+        <div class="subheader-text">Image Gallery</div>
+        <div class="project-gallery-content">
+            <!-- 
+              TODO
+
+              This is where the images in the gallery live. Here's a simple gallery image for you to copy:
+
+              Full Width Image:
+
+                <div class="gallery-image-container">
+                  <img src="../assets/images/IMAGE_NAME" class="gallery-image">
+                  <span class="image-caption">IMAGE_CAPTION</span>
+                </div>
+
+              Half Width Image: 
+
+                <div class="gallery-image-container half-width">
+                  <img src="../assets/images/IMAGE_NAME" class="gallery-image">
+                  <span class="image-caption">IMAGE_CAPTION</span>
+                </div>
+
+              - To add an image to the this area, copy one of the above, paste it below this comment, and change the following:
+                  - IMAGE_NAME: the name of the image file in assets/images
+                  - IMAGE_CAPTION: to the caption of the image
+            -->
+            <div class="gallery-image-container half-width">
+              <img src="../assets/images/StabilisedSight/TestingEnvironment.jpg" class="gallery-image">
+              <span class="image-caption">Platform used to demonstrate and test device</span>
+            </div>
+            <div class="gallery-image-container half-width">
+              <img src="../assets/images/StabilisedSight/YawInt2.png" class="gallery-image">
+              <span class="image-caption">Response of PID when setpoint is changed. </span>
+            </div>
+            <div class="gallery-image-container">
+              <img src="../assets/images/StabilisedSight/1xZoom.jpg" class="gallery-image">
+              <span class="image-caption">Video feed displayed from the block camera</span>
+            </div>
+            <div class="gallery-image-container">
+              <img src="../assets/images/camera.jpeg" class="gallery-image">
+              <span class="image-caption">Using the joystick to adjust the zoom level of the camera</span>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <details open="" class="details-reset border rounded-2">
+      <summary class="px-3 py-2 border-bottom">
+        <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-device-camera-video">
+        <path fill-rule="evenodd" d="..."></path>
+    </svg>
+        <span aria-label="Video description dotnet-evergreen.mp4" class="m-1">dotnet-evergreen.mp4</span>
+        <span class="dropdown-caret"></span>
+      </summary>
+    
+      <video src="https://github.com/PieterRoux/PieterRoux/assets/78928800/f6f94d2f-fe9c-4003-8d08-23fc0eeff2ce" data-canonical-src="https://github.com/PieterRoux/PieterRoux/assets/78928800/f6f94d2f-fe9c-4003-8d08-23fc0eeff2ce" controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit" style="max-height:640px;">
+    
+      </video>
+    </details>
+
+    <!-- FOOTER -->
+    <div id="footer">
+      <!-- 
+        TODO - Change the email after "mailto" to your contact email 
+      
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" href="mailto:pieterhroux00@gmail.com">
+        <image src="../assets/icons/mail.svg" class="footer-icon"/>
+      </a>
+    </div>
+
+	</body>
+</html>
+https://github.com/PieterRoux/PieterRoux/assets/78928800/f6f94d2f-fe9c-4003-8d08-23fc0eeff2ce
